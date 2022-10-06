@@ -16,13 +16,13 @@ app.post('/contact',(req,res)=>{
     const transporter =nodemailer.createTransport({
         service:"gmail",
         auth:{
-            user:'jabez@creatorslab.in',
-            pass:'rjvfuraugidbfytm'
+            user:'contact@creatorslab.in',
+            pass:'ottfyrvkhldwcfwu'
         }
     })
     const mailOptions = {
         from:req.body.email,
-        to:'contact@creatorslab.in',
+        to:'jabez@creatorslab.in',
         subject:`Message from ${req.body.email}:${req.body.name}`,
         html:`<p>Name:${req.body.name}</p><p>Phone:${req.body.phone}</p><p>Department:${req.body.department}</p><p>Collegename:${req.body.collegename}</p><p>Currentyear:${req.body.currentyear}</p><p>Message:${req.body.message}</p>`,
     }
